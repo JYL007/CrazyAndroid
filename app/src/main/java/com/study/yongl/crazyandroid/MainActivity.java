@@ -1,5 +1,6 @@
 package com.study.yongl.crazyandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 show.setText(R.string.Hello+",Android,"+new java.util.Date());
+
+                Intent intent=new Intent(MainActivity.this,ImageActivity.class);
+                startActivity(intent);
             }
         });
     }
