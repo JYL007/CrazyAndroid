@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CrazyAndroid</string>
+    <string name="OK">OK</string>
+    <string name="Hello">Hello</string>
 </resources>
