@@ -21,20 +21,29 @@ public class MainActivity extends AppCompatActivity {
         layout.setOrientation(LinearLayout.VERTICAL);
         final TextView show=new TextView(this);
         Button bn=new Button(this);
+        Button bt=new Button(this);
 
-        bn.setText(R.string.OK);
+        bn.setText("进入跟随小球");
+        bt.setText("进入图片切换");
+
         bn.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT));
-
+        bt.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT));
         layout.addView(bn);
+        layout.addView(bt);
         layout.addView(show);
         bn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch(v.getId())
-                {
-                }
                 show.setText(R.string.Hello+",Android,"+new java.util.Date());
                 Intent intent=new Intent(MainActivity.this,CustomView.class);
+                startActivity(intent);
+            }
+        });
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                show.setText(R.string.Hello+",Android,"+new java.util.Date());
+                Intent intent=new Intent(MainActivity.this,ImageActivity.class);
                 startActivity(intent);
             }
         });
