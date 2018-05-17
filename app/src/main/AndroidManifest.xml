@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImageActivity" />
-        <activity android:name=".CustomView"></activity>
+        <activity android:name=".CustomView" />
+        <activity android:name=".FrameLayoutView"></activity>
     </application>
 
 </manifest>
