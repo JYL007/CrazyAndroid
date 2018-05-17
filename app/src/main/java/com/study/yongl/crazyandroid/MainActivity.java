@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int KEY=1000;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         layout.setOrientation(LinearLayout.VERTICAL);
         final TextView show=new TextView(this);
         Button bn=new Button(this);
+
         bn.setText(R.string.OK);
         bn.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT));
 
@@ -28,9 +30,11 @@ public class MainActivity extends AppCompatActivity {
         bn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                switch(v.getId())
+                {
+                }
                 show.setText(R.string.Hello+",Android,"+new java.util.Date());
-
-                Intent intent=new Intent(MainActivity.this,ImageActivity.class);
+                Intent intent=new Intent(MainActivity.this,CustomView.class);
                 startActivity(intent);
             }
         });

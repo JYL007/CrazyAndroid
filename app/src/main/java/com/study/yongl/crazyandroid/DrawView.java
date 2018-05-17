@@ -26,13 +26,4 @@ public class DrawView extends View
         paint.setColor(Color.RED);
         canvas.drawCircle(currentX,currentY,15,paint);
     }
-    @Override
-    public boolean onTouchEvent(MotionEvent event)
-    {
-        currentX=event.getX();
-        currentY=event.getY();
-        invalidate();
-        return true;
-    }
-
 }
